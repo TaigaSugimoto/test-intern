@@ -161,8 +161,8 @@ public class TranslateServlet extends HttpServlet {
         objList.add(new RequestBody(text));
         String content = new Gson().toJson(objList); //JavaからJSON形式へ
         String result = post(url, content);
-        RequestBody reqResult = Gson.fromJson(result,RequestBody.class);
-        return reqResult.text;
+        //RequestBody reqResult = Gson.fromJson(result,RequestBody.class);
+        return result;
     }
     /**
      * 通信処理.<br>
